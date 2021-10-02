@@ -25,4 +25,4 @@ To install and run the application, you will need to install:
 If you have any questions about the repo, open an issue or contact [javantie](https://github.com/javantie) directly [javantieclarke@gmail.com](mailto:javantieclarke@gmail.com).
 
 # Screen Shot:
-
+![App Image](https://github.com/javantie/Budget-App/blob/main/public/img/Capture.PNG)
