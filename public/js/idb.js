@@ -24,10 +24,10 @@ request.onerror = function(event) {
 function saveRecord(record) {
   const transaction = db.transaction(['new_budget'], 'readwrite');
 
-  const pizzaObjectStore = transaction.objectStore('new_budget');
+  const budgetObjectStore = transaction.objectStore('new_budget');
 
   // add record to your store with add method.
-  pizzaObjectStore.add(record);
+  budgetObjectStore.add(record);
 }
 
 function uploadBudget() {
@@ -35,10 +35,10 @@ function uploadBudget() {
   const transaction = db.transaction(['new_budget'], 'readwrite');
 
   // access your pending object store
-  const pizzaObjectStore = transaction.objectStore('new_budget');
+  const budgetObjectStore = transaction.objectStore('new_budget');
 
   // get all records from store and set to a variable
-  const getAll = pizzaObjectStore.getAll();
+  const getAll = budgetObjectStore.getAll();
 
   getAll.onsuccess = function() {
     // if there was data in indexedDb's store, let's send it to the api server
@@ -58,9 +58,9 @@ function uploadBudget() {
           }
 
           const transaction = db.transaction(['new_budget'], 'readwrite');
-          const pizzaObjectStore = transaction.objectStore('new_budget');
+          const budgetObjectStore = transaction.objectStore('new_budget');
           // clear all items in your store
-          pizzaObjectStore.clear();
+          budgetObjectStore.clear();
         })
         .catch(err => {
           // set reference to redirect back here
